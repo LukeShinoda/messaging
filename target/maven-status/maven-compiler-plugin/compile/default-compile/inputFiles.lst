@@ -1,3 +1,4 @@
 /home/lucas/dev/java/messaging/src/main/java/com/ed/messaging/Receiver.java
 /home/lucas/dev/java/messaging/src/main/java/com/ed/messaging/MessagingApplication.java
 /home/lucas/dev/java/messaging/src/main/java/com/ed/messaging/Email.java
+/home/lucas/dev/java/messaging/src/main/java/com/ed/messaging/CamelRoute.java

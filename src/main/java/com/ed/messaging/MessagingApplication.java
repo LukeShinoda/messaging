@@ -1,7 +1,10 @@
 package com.ed.messaging;
 
 import javax.jms.ConnectionFactory;
+import javax.jms.JMSException;
 
+import org.apache.activemq.ActiveMQConnectionFactory;
+import org.apache.camel.component.jms.JmsComponent;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jms.DefaultJmsListenerContainerFactoryConfigurer;
@@ -35,9 +38,24 @@ public class MessagingApplication {
 	    converter.setTypeIdPropertyName("_type");
 	    return converter;
 	  }
+	  @Bean
+	  public JmsComponent jmsComponent() throws JMSException{
+		  ActiveMQConnectionFactory cf= new ActiveMQConnectionFactory();
+		  cf.setBrokerURL("tcp://localhost:8161");
+		  cf.setUserName("admin");
+		  cf.setPassword("admin");
+		  JmsComponent jms = new JmsComponent();
+		  jms.setConnectionFactory(cf);
+		  return jms;
+	  }
+	  
+	  @Bean
+	  public String beanTest()
+	  {
+		  return "hi";
+	  }
 	public static void main(String[] args) {
 		 ConfigurableApplicationContext context = SpringApplication.run(MessagingApplication.class, args);
-
 		    JmsTemplate jmsTemplate = context.getBean(JmsTemplate.class);
 
 		    // Send a message with a POJO - the template reuse the message converter

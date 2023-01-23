@@ -27,6 +27,39 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-jms</artifactId>
+			<version>3.20.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-activemq</artifactId>
+			<version>3.20.1</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.camel.springboot</groupId>
+		    <artifactId>camel-spring-boot-dependencies</artifactId>
+		    <version>3.20.1</version>
+		    <type>pom</type>
+		    <scope>provided</scope>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.camel.springboot</groupId>
+		    <artifactId>camel-spring-boot-starter</artifactId>
+		    <version>3.20.1</version>
+		</dependency>
+		<dependency>
+    <groupId>org.apache.camel</groupId>
+    <artifactId>camel-stream</artifactId>
+    <version>3.20.1</version>
+</dependency>
+
+		<dependency>
+		    <groupId>org.apache.camel</groupId>
+		    <artifactId>camel-core</artifactId>
+		    <version>3.20.1</version>
+		</dependency>
 	</dependencies>
 
 	<build>

@@ -1,3 +1,4 @@
 com/ed/messaging/Receiver.class
+com/ed/messaging/CamelRoute.class
 com/ed/messaging/MessagingApplication.class
 com/ed/messaging/Email.class
